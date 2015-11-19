@@ -4,21 +4,28 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class JobNumber {
-	String Id;
 	static int uuid=0001;
 
-	public String getId() {
-		return Id;
-	}
 
-	public void setId(String id) {
-		Id = id;
-	}
-
-	public void getNowTime() {
+	/**
+	 * 获取当前工号
+	 * @return
+	 */
+	public static String getUUID() {
 		Date date = new Date();
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
-		setId(dateFormat.format(date)+uuid);
+		String nowtime=(dateFormat.format(date)+uuid);
 		uuid++;
+		return nowtime;
+		
+	}
+	/**
+	 * 获取当前时间
+	 * @return
+	 */
+	public static String getNowTime(){
+		Date date = new Date();
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
+		return dateFormat.format(date);
 	}
 }

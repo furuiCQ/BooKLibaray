@@ -3,16 +3,28 @@ package com.frain.entity;
 import java.util.LinkedList;
 
 public class Student {
-	
+	String name;
 	String sex;
 	int age;
 	String Id;
 	String password;
 	String major;
+	String lastModifyTime;
 	LinkedList<Books> booksList;
 	
+	public String getLastModifyTime() {
+		return lastModifyTime;
+	}
+	public void setLastModifyTime(String lastModifyTime) {
+		this.lastModifyTime = lastModifyTime;
+	}
 	
-	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 	public String getSex() {
 		return sex;
 	}

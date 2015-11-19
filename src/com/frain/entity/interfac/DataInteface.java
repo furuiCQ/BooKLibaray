@@ -1,9 +1,9 @@
 package com.frain.entity.interfac;
 
 public interface DataInteface {
-	public void register();
+	public void register(String name,String fristPassword,String confirmPassword,int type);
 
-	public void login();
+	public void login(String name, String Password, int type);
 
 	public void loanBook();
 
@@ -12,4 +12,6 @@ public interface DataInteface {
 	public void deletBook();
 
 	public void addBook();
+	
+	public void modifyAccountDate();
 }

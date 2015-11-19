@@ -12,7 +12,7 @@ public class RegisterExpection extends Exception{
 	public static String NAME_IS_NULL="the login name is null,please confirm!";
 	public static String PASSWORD£ßIS_NULL="the password is null,please confirm!";
 	public static String PASSWORD£ßNOT_EQUALS="the two time password is not equals,please confirm!";
-
+	public static String CONFIRM_ACCOUNT_TYPE="confirm your account type 0:admin 1:student 2:teacher";
 	
 	
 	public RegisterExpection() {
