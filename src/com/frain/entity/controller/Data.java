@@ -57,21 +57,26 @@ public class Data implements DataInteface {
 	public void setBookList(ArrayList<Books> bookList) {
 		this.bookList = bookList;
 	}
-
+	
 	@Override
 	public void register(String name, String fristPassword, String confirmPassword, int type) {
 		// TODO Auto-generated method stub
+		//注册账户前的逻辑判断
 		try {
+			
 			if (name != null && !name.equals("")) {
 				throw new RegisterExpection(RegisterExpection.NAME_IS_NULL);
 			}
+			
 			if (fristPassword != null && !fristPassword.equals("")) {
 				throw new RegisterExpection(RegisterExpection.PASSWORD＿IS_NULL);
 			}
+			
 			if (!fristPassword.equals(confirmPassword)) {
 				throw new RegisterExpection(RegisterExpection.PASSWORD＿NOT_EQUALS);
 			}
 
+			
 			switch (type) {
 
 			case 0:// 管理员账户注册
@@ -89,6 +94,7 @@ public class Data implements DataInteface {
 		} catch (RegisterExpection e) {
 			// TODO: handle exception
 			System.out.println(e);
+			//e.printStackTrace();
 		}
 
 	}
